@@ -86,4 +86,21 @@ public class Flower
         final int BUFFER = 1;
         UI.eraseRect(left, top, flowerSize+1, bottom+BUFFER);
     }
+    
+    /**
+     * Make the flower grow
+     */
+    public void grow() {
+        //Erase the flower
+        this.erase();
+        
+        //increase the size
+        this.flowerY -= 10;     //increase the height
+        this.flowerSize+=10;    //increase the bulb 
+        this.setTop();
+        this.setLeft();
+        
+        //Draw the flower again
+        this.draw();
+    }
 }
