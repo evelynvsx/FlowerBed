@@ -77,6 +77,13 @@ public class Flower
         UI.setColor(this.color);                        //set flower color
         UI.fillOval(left, top, flowerSize, flowerSize); //draw flower
         UI.sleep(500);                                  //wait
-        
+    }
+    
+    /**
+     * Erase a rectangle around the current object
+     */
+    public void erase() {
+        final int BUFFER = 1;
+        UI.eraseRect(left, top, flowerSize+1, bottom+BUFFER);
     }
 }
